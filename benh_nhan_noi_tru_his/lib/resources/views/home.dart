@@ -165,8 +165,9 @@ class HomeScreen extends StatelessWidget {
             color: Colors.white,
             onPressed: () {
               Commons.userLogin = null;
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const LoginScreen()));
+              Navigator.pushNamed(context, '$LoginScreen');
+              // Navigator.of(context).push(MaterialPageRoute(
+              //     builder: (BuildContext context) => const LoginScreen()));
             },
           ),
         ],
@@ -271,21 +272,21 @@ class HomeScreen extends StatelessWidget {
   void onTapMenuItem(BuildContext context, CardEnum cardNum) {
     switch (cardNum) {
       case CardEnum.noiTru:
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const BenhNhanNoiTruScreen()));
+        Navigator.pushNamed(context, '$BenhNhanNoiTruScreen');
         break;
 
       case CardEnum.ngoaiTru:
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const BenhNhanNgoaiTruScreen()));
+        Navigator.pushNamed(context, '$BenhNhanNgoaiTruScreen');
         break;
 
       case CardEnum.userList:
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const UserListScreen()));
+        Navigator.pushNamed(context, '$UserListScreen');
         break;
 
       default:
+        // Có thể dùng
+        // Navigator.of(context).push(MaterialPageRoute(
+        //     builder: (BuildContext context) => const BenhNhanNoiTruScreen()));
     }
   }
 
