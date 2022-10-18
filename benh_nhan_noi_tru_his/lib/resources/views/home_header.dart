@@ -53,7 +53,7 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
                           ),
                           Text(
                             messageUnread > 0
-                                ? "  Bạn có $messageUnread tin nhắn chưa xem"
+                                ? " Bạn có $messageUnread tin nhắn chưa xem"
                                 : " Bạn không có tin nhắn nào !",
                             style: const TextStyle(
                                 fontSize: Commons.fontSize16,
@@ -84,6 +84,7 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
     );
   }
 
+  // hiệu ứng background
   ParticleOptions particles = const ParticleOptions(
     baseColor: Colors.blueAccent,
     spawnOpacity: 0.0,
