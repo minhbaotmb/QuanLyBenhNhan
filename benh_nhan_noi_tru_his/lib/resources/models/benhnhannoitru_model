@@ -1,0 +1,101 @@
+class BenhNhanNoiTruModel {
+  int? ptId;
+  String? medRcdNo;
+  int? ptGender;
+  int? wardAdmId;
+  String? ptCode;
+  String? ptName;
+  int? bloodType;
+  String? bloodName;
+  DateTime? ptDob;
+  int? wardId;
+  String? wardName;
+  DateTime? rcvOn;
+  DateTime? receiveOn;
+  int? insBenefitType;
+  String? dxInText;
+  String? dxInICD;
+  String? bedCode;
+
+  BenhNhanNoiTruModel({
+    this.ptId,
+    this.medRcdNo,
+    this.ptGender,
+    this.wardAdmId,
+    this.ptCode,
+    this.ptName,
+    this.bloodType,
+    this.bloodName,
+    this.ptDob,
+    this.wardId,
+    this.wardName,
+    this.rcvOn,
+    this.receiveOn,
+    this.insBenefitType,
+    this.dxInText,
+    this.dxInICD,
+    this.bedCode
+  });
+
+  BenhNhanNoiTruModel copyWith({
+    ptId,
+    medRcdNo,
+    ptGender,
+    wardAdmId,
+    ptCode,
+    ptName,
+    bloodType,
+    bloodName,
+    ptDob,
+    wardId,
+    wardName,
+    rcvOn,
+    receiveOn,
+    insBenefitType,
+    dxInText,
+    dxInICD,
+    bedCode
+  }) {
+    return BenhNhanNoiTruModel(
+      ptId: ptId ?? this.ptId,
+      medRcdNo: medRcdNo ?? this.medRcdNo,
+      ptGender: ptGender ?? this.ptGender,
+      wardAdmId: wardAdmId ?? this.wardAdmId,
+      ptCode: ptCode ?? this.ptCode,
+      ptName: ptName ?? this.ptName,
+      bloodType: bloodType ?? this.bloodType,
+      bloodName: bloodName ?? this.bloodName,
+      ptDob: ptDob ?? this.ptDob,
+      wardId: wardId ?? this.wardId,
+      wardName: wardName ?? this.wardName,
+      rcvOn: rcvOn ?? this.rcvOn,
+      receiveOn: receiveOn ?? this.receiveOn,
+      insBenefitType: insBenefitType ?? this.insBenefitType,
+      dxInText: dxInText ?? this.dxInText,
+      dxInICD: dxInICD ?? this.dxInICD,
+      bedCode: bedCode ?? this.bedCode,
+    );
+  }
+
+  factory BenhNhanNoiTruModel.fromJson(Map<String, dynamic> json) {
+    return BenhNhanNoiTruModel(
+      ptId: json['ptId'],
+      medRcdNo: json['medRcdNo'],
+      ptGender: json['ptGender'],
+      wardAdmId: json['wardAdmId'],
+      ptCode: json['ptCode'],
+      ptName: json['ptName'],
+      bloodType: json['bloodType'],
+      bloodName: json['bloodName'],
+      ptDob: DateTime.parse(json['ptDob']),
+      wardId: json['wardId'],
+      wardName: json['wardName'],
+      rcvOn:  DateTime.parse(json['rcvOn']),
+      receiveOn:  DateTime.parse(json['receiveOn']),
+      insBenefitType: json['insBenefitType'],
+      dxInText: json['dxInText'],
+      dxInICD: json['dxInICD'],
+      bedCode: json['bedCode'],
+    );
+  }
+}

@@ -1,0 +1,61 @@
+class UserModel {
+  int? userId;
+  String? account;
+  String? password;
+  String? firstName;
+  String? lastName;
+  String? fullName;
+  int? staffId;
+  String? token;
+  String? avatarPath;
+
+  UserModel({
+    this.userId,
+    this.account,
+    this.password,
+    this.firstName,
+    this.lastName,
+    this.fullName,
+    this.staffId,
+    this.token,
+    this.avatarPath,
+  });
+
+  UserModel copyWith({
+    userId,
+    account,
+    password,
+    firstName,
+    lastName,
+    fullName,
+    staffId,
+    token,
+    avatarPath
+  }) {
+    return UserModel(
+      userId: userId ?? this.userId,
+      account: account ?? this.account,
+      password: password ?? this.password,
+      firstName: firstName ?? this.firstName,
+      lastName: lastName ?? this.lastName,
+      fullName: fullName ?? this.fullName,
+      staffId: staffId ?? this.staffId,
+      token: token ?? this.token,
+      avatarPath: avatarPath ?? this.avatarPath,
+    );
+  }
+
+  factory UserModel.fromJson(Map<String, dynamic> json) {
+    return UserModel(
+      userId: json['userId'],
+      account: json['account'],
+      password: json['password'],
+      firstName: json['firstName'],
+      lastName: json['lastName'],
+      fullName: (json['lastName'] != null ? json['lastName'].toString() : "") + " " + (json['firstName'] != null ? json['firstName'].toString() : ""),
+      staffId: json['staffId'],
+      token: json['token'],
+      avatarPath: json['avatarPath'],
+    );
+  }
+}

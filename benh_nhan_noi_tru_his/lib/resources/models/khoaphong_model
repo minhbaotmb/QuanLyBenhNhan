@@ -1,0 +1,26 @@
+class KhoaPhongModel {
+  int? wardId;
+  String? name;
+
+  KhoaPhongModel({
+    this.wardId,
+    this.name,
+  });
+
+  KhoaPhongModel copyWith({
+    wardId,
+    name,
+  }) {
+    return KhoaPhongModel(
+      wardId: wardId ?? this.wardId,
+      name: name ?? this.name,
+    );
+  }
+
+  factory KhoaPhongModel.fromJson(Map<String, dynamic> json) {
+    return KhoaPhongModel(
+      wardId: json['wardId'],
+      name: json['name'],
+    );
+  }
+}
