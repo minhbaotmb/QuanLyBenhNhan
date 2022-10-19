@@ -80,7 +80,11 @@ class _UserListScreenState extends State<UserListScreen> {
     return GridView.count(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      crossAxisCount: size.width > 500 ? 4 : 3,
+      crossAxisCount: size.width < 500
+          ? 3
+          : (size.width < 800
+              ? 4
+              : (size.width < 1000 ? 5 : (size.width < 1200 ? 6 : 7))),
       padding: const EdgeInsets.all(5.0),
       childAspectRatio: 1.1, // bề rộng của cell
       children: List.generate(

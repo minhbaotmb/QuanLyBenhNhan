@@ -34,7 +34,7 @@ class _UserInfoScreenState extends State<UserInfoScreen>
 
   Container header() {
     return Container(
-      color: Colors.blue,
+      color: Commons.kColor,
       height: Commons.headerSize,
       child: DrawerHeader(
         decoration: Helpers.gradientDecoration(Commons.k2Color, Commons.kColor),

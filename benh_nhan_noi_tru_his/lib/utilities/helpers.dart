@@ -116,7 +116,7 @@ class Helpers {
             isShowError == true
                 ? Icons.error_outline_sharp
                 : icon ?? Icons.cloud_done,
-            color: isShowError == true ? Colors.red : Colors.blue,
+            color: isShowError == true ? Colors.red : Commons.kColor,
             size: 40,
           ),
         ),

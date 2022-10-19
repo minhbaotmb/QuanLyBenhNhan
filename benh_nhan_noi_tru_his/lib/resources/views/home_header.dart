@@ -36,6 +36,7 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 90, 0, 0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Chào \r\n${Commons.userLogin!.fullName!.toUpperCase()}",

@@ -144,7 +144,7 @@ class HomeScreen extends StatelessWidget {
 
   BottomAppBar bottomNavigationBar(BuildContext context) {
     return BottomAppBar(
-      color: Commons.k2Color.withOpacity(.9),
+      color: Commons.kColor.withGreen(100),
       shape: const CircularNotchedRectangle(),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -186,8 +186,9 @@ class HomeScreen extends StatelessWidget {
             TextSpan(text: '${text.trim()} '),
             TextSpan(
               text: NumberFormat('#,##0').format(total ?? 0).toString(),
-              style: const TextStyle(
-                  color: Commons.kColor, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Commons.kColor.withGreen(100),
+                  fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -228,27 +229,46 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Card menuItem(BuildContext context, String? text, String? subText,
+  Stack menuItem(BuildContext context, String? text, String? subText,
       IconData iconData, CardEnum cardNum) {
-    return Card(
-      margin: const EdgeInsets.all(10),
-      color: Colors.blue[700],
-      elevation: 10,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          ListTile(
-            leading: iconMenuItem(iconData, cardNum),
-            title: Text(text ?? "",
-                style: const TextStyle(
-                    fontSize: Commons.fontSize20, color: Colors.white)),
-            subtitle: Text(subText ?? "",
-                style: const TextStyle(color: Commons.k3Color)),
-            onTap: () => onTapMenuItem(context, cardNum),
-          ),
-        ],
+    return Stack(children: [
+      Card(
+        margin: const EdgeInsets.all(10),
+        color: Commons.kColor.withGreen(100),
+        shadowColor: Commons.kColor,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            ListTile(
+              leading: iconMenuItem(iconData, cardNum),
+              title: Text(text ?? "",
+                  style: const TextStyle(
+                      fontSize: Commons.fontSize20, color: Colors.white)),
+              subtitle: Text(subText ?? "",
+                  style: const TextStyle(color: Commons.k3Color)),
+              onTap: () => onTapMenuItem(context, cardNum),
+            ),
+          ],
+        ),
       ),
-    );
+      Positioned(
+        right: 0,
+        top: 30,
+        child: Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Container(
+              width: 10,
+              height: 20,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    bottomLeft: Radius.circular(20)),
+                color: Colors.white,
+              )),
+        ),
+      )
+    ]);
   }
 
   Widget iconMenuItem(IconData iconData, CardEnum cardNum) {
@@ -284,9 +304,9 @@ class HomeScreen extends StatelessWidget {
         break;
 
       default:
-        // Có thể dùng
-        // Navigator.of(context).push(MaterialPageRoute(
-        //     builder: (BuildContext context) => const BenhNhanNoiTruScreen()));
+      // Có thể dùng
+      // Navigator.of(context).push(MaterialPageRoute(
+      //     builder: (BuildContext context) => const BenhNhanNoiTruScreen()));
     }
   }
 
