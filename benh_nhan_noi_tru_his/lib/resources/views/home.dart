@@ -12,6 +12,8 @@ import 'package:intl/intl.dart';
 import '../../utilities/helpers.dart';
 import '../../utilities/popup_show.dart';
 
+const cardItemHeight = 95.0;
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -232,29 +234,33 @@ class HomeScreen extends StatelessWidget {
   Stack menuItem(BuildContext context, String? text, String? subText,
       IconData iconData, CardEnum cardNum) {
     return Stack(children: [
-      Card(
-        margin: const EdgeInsets.all(10),
-        color: Commons.kColor.withGreen(100),
-        shadowColor: Commons.kColor,
-        elevation: 10,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            ListTile(
-              leading: iconMenuItem(iconData, cardNum),
-              title: Text(text ?? "",
-                  style: const TextStyle(
-                      fontSize: Commons.fontSize20, color: Colors.white)),
-              subtitle: Text(subText ?? "",
-                  style: const TextStyle(color: Commons.k3Color)),
-              onTap: () => onTapMenuItem(context, cardNum),
-            ),
-          ],
+      Container(
+        alignment: Alignment.center,
+        height: cardItemHeight,
+        child: Card(
+          margin: const EdgeInsets.all(10),
+          color: Commons.kColor.withGreen(100),
+          shadowColor: Commons.kColor,
+          elevation: 10,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              ListTile(
+                leading: iconMenuItem(iconData, cardNum),
+                title: Text(text ?? "",
+                    style: const TextStyle(
+                        fontSize: Commons.fontSize20, color: Colors.white)),
+                subtitle: Text(subText ?? "",
+                    style: const TextStyle(color: Commons.k3Color)),
+                onTap: () => onTapMenuItem(context, cardNum),
+              ),
+            ],
+          ),
         ),
       ),
       Positioned(
         right: 0,
-        top: 30,
+        top: cardItemHeight / 2 - 10,
         child: Padding(
           padding: const EdgeInsets.only(right: 10),
           child: Container(
