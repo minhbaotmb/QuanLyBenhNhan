@@ -16,12 +16,14 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
 
   @override
   Widget build(BuildContext context) {
+    bool isOrientationPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Expanded(
           child: SizedBox(
-            height: MediaQuery.of(context).orientation == Orientation.portrait
+            height: isOrientationPortrait
                 ? Commons.headerSize
                 : Commons.headerSize / 2,
             child: AnimatedBackground(
@@ -36,7 +38,7 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
                   }
                 }),
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 90, 0, 0),
+                  padding: EdgeInsets.fromLTRB(20, isOrientationPortrait ? 90 : 10, 0, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

@@ -25,28 +25,30 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       body: UnFocus(
-        child: Container(
-          height: size.height,
-          width: size.width,
-          padding: const EdgeInsets.all(50),
-          child: Form(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(height: 20.0),
-                logo(size.width),
-                title(),
-                const SizedBox(height: 60.0),
-                userNameForm(),
-                passwordForm(),
-                const SizedBox(height: 40.0),
-                loginForm(context),
-                Container(
-                  padding: const EdgeInsets.only(top: 50),
-                  child:
-                      const Text('Bạn quên mật khẩu? chúng tôi cũng hết cách!'),
-                ),
-              ],
+        child: SingleChildScrollView(
+          child: Container(
+            height: size.height,
+            width: size.width,
+            padding: const EdgeInsets.all(50),
+            child: Form(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 20.0),
+                  logo(size.width),
+                  title(),
+                  const SizedBox(height: 60.0),
+                  userNameForm(),
+                  passwordForm(),
+                  const SizedBox(height: 40.0),
+                  loginForm(context),
+                  Container(
+                    padding: const EdgeInsets.only(top: 50),
+                    child:
+                        const Text('Bạn quên mật khẩu? chúng tôi cũng hết cách!'),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

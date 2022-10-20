@@ -33,9 +33,11 @@ class _UserInfoScreenState extends State<UserInfoScreen>
   }
 
   Container header() {
+    var orientationPortrait =
+        MediaQuery.of(context).orientation == Orientation.portrait;
     return Container(
       color: Commons.kColor,
-      height: MediaQuery.of(context).orientation == Orientation.portrait ? Commons.headerSize : Commons.headerSize / 2,
+      height: orientationPortrait ? Commons.headerSize : Commons.headerSize / 2,
       child: DrawerHeader(
         decoration: Helpers.gradientDecoration(Commons.k2Color, Commons.kColor),
         child: Column(
@@ -49,7 +51,7 @@ class _UserInfoScreenState extends State<UserInfoScreen>
                   Hero(
                     tag: Commons.heroAccount,
                     child: CircleAvatar(
-                      radius: 70,
+                      radius: orientationPortrait ? 70 : 20,
                       backgroundImage: AssetImage(Globals.avatarRandom()),
                     ),
                   ),
