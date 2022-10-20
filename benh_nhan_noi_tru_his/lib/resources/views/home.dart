@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: Helpers.gradientDecoration(Commons.k2Color, Commons.kColor),
+        decoration: Helpers.gradientDecoration(Commons.kColorBlueShade, Commons.kColor),
         child: Column(
           children: [
             const HomeHeaderScreen(),
@@ -251,7 +251,7 @@ class HomeScreen extends StatelessWidget {
                     style: const TextStyle(
                         fontSize: Commons.fontSize20, color: Colors.white)),
                 subtitle: Text(subText ?? "",
-                    style: const TextStyle(color: Commons.k3Color)),
+                    style: const TextStyle(color: Commons.kColorYellow)),
                 onTap: () => onTapMenuItem(context, cardNum),
               ),
             ],
@@ -278,7 +278,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget iconMenuItem(IconData iconData, CardEnum cardNum) {
-    var icon = Icon(iconData, color: Commons.k3Color, size: 35);
+    var icon = Icon(iconData, color: Commons.kColorYellow, size: 35);
 
     switch (cardNum) {
       case CardEnum.noiTru:
@@ -334,7 +334,7 @@ class HomeScreen extends StatelessWidget {
       Helpers.addLineDetail(null, "QUẢN LÝ BỆNH NHÂN NỘI TRÚ",
           fontWeight: FontWeight.bold, color: Commons.kColor),
       Helpers.addLineDetail(null, "BỆNH VIỆN LONG KHÁNH",
-          fontWeight: FontWeight.bold, color: Commons.k2Color),
+          fontWeight: FontWeight.bold, color: Commons.kColorBlueShade),
       Helpers.addLineDetail("Phiên bản: ", "1.0.0.1"),
       const SizedBox(height: 30, child: Text('-----')),
       Helpers.addLineDetail("Công ty Cổ phần ", "Infomed",

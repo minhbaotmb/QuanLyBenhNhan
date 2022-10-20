@@ -55,8 +55,8 @@ class _BenhNhanNoiTruScreenState extends State<BenhNhanNoiTruScreen> {
             child: TextFormField(
               controller: txtSearch,
               textAlign: TextAlign.left,
-              cursorColor: Commons.k3Color,
-              style: const TextStyle(color: Commons.k3Color),
+              cursorColor: Commons.kColorYellow,
+              style: const TextStyle(color: Commons.kColorYellow),
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
@@ -68,10 +68,10 @@ class _BenhNhanNoiTruScreenState extends State<BenhNhanNoiTruScreen> {
                 ),
                 contentPadding: const EdgeInsets.only(top: 7),
                 hintText: 'Tìm kiếm...',
-                hintStyle: const TextStyle(color: Commons.k3Color),
+                hintStyle: const TextStyle(color: Commons.kColorYellow),
                 prefixIcon: const Icon(
                   Icons.search,
-                  color: Commons.k3Color,
+                  color: Commons.kColorYellow,
                   size: 20,
                 ),
               ),
@@ -129,7 +129,7 @@ class _BenhNhanNoiTruScreenState extends State<BenhNhanNoiTruScreen> {
 
           return Container(
             height: 45,
-            color: Commons.k3Color.withGreen(200).withOpacity(.7),
+            color: Commons.kColorYellow.withGreen(200).withOpacity(.7),
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: DropdownSearch<KhoaPhongModel?>(
@@ -148,7 +148,7 @@ class _BenhNhanNoiTruScreenState extends State<BenhNhanNoiTruScreen> {
                     border: InputBorder.none,
                     //labelText: "Chọn khoa",
                     hintText: "-- Chọn khoa --",
-                    hintStyle: TextStyle(color: Commons.k2Color),
+                    hintStyle: TextStyle(color: Commons.kColorBlueShade),
                   ),
                 ),
                 onChanged: (item) async {
@@ -221,7 +221,7 @@ class _BenhNhanNoiTruScreenState extends State<BenhNhanNoiTruScreen> {
                               .toString()
                               .toUpperCase(),
                           style: const TextStyle(
-                            color: Commons.k2Color,
+                            color: Commons.kColorBlueShade,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

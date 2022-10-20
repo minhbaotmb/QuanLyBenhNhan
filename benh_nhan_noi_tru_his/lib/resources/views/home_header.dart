@@ -54,7 +54,7 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
                             messageUnread > 0
                                 ? Icons.notifications_active_sharp
                                 : Icons.notifications,
-                            color: Commons.k3Color,
+                            color: Commons.kColorYellow,
                           ),
                           Text(
                             messageUnread > 0

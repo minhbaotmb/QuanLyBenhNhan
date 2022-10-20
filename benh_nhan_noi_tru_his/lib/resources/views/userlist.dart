@@ -128,7 +128,7 @@ class _UserListScreenState extends State<UserListScreen> {
                 user.fullName!,
                 style: const TextStyle(
                     fontSize: Commons.fontSize16 * 0.8,
-                    color: Commons.k2Color,
+                    color: Commons.kColorBlueShade,
                     fontWeight: FontWeight.bold),
                 overflow: TextOverflow.ellipsis,
               ),
@@ -137,7 +137,7 @@ class _UserListScreenState extends State<UserListScreen> {
               user.account!,
               style: const TextStyle(
                 fontSize: Commons.fontSize16 * 0.7,
-                color: Commons.k2Color,
+                color: Commons.kColorBlueShade,
               ),
             ),
           ],

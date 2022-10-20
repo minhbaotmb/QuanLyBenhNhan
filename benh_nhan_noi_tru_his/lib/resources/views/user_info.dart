@@ -39,7 +39,7 @@ class _UserInfoScreenState extends State<UserInfoScreen>
       color: Commons.kColor,
       height: orientationPortrait ? Commons.headerSize : Commons.headerSize / 1.8,
       child: DrawerHeader(
-        decoration: Helpers.gradientDecoration(Commons.k2Color, Commons.kColor),
+        decoration: Helpers.gradientDecoration(Commons.kColorBlueShade, Commons.kColor),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [

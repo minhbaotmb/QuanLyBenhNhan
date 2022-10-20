@@ -5,8 +5,8 @@ class Commons {
   static UserModel? userLogin;
 
   static const MaterialColor kColor = Colors.blue;
-  static const Color k2Color = Color.fromARGB(255, 3, 58, 160);
-  static const Color k3Color = Colors.yellow;
+  static const Color kColorBlueShade = Color.fromARGB(255, 3, 58, 160);
+  static const Color kColorYellow = Colors.yellow;
 
   static const double fontSize20 = 20;
   static const double fontSize16 = 16;
