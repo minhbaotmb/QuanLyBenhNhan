@@ -146,7 +146,7 @@ class HomeScreen extends StatelessWidget {
 
   BottomAppBar bottomNavigationBar(BuildContext context) {
     return BottomAppBar(
-      color: Commons.kColor.withGreen(100),
+      color: Commons.kColor.withGreen(120),
       shape: const CircularNotchedRectangle(),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -188,8 +188,8 @@ class HomeScreen extends StatelessWidget {
             TextSpan(text: '${text.trim()} '),
             TextSpan(
               text: NumberFormat('#,##0').format(total ?? 0).toString(),
-              style: TextStyle(
-                  color: Commons.kColor.withGreen(100),
+              style: const TextStyle(
+                  color: Commons.kColor,
                   fontWeight: FontWeight.bold),
             ),
           ],
@@ -239,7 +239,7 @@ class HomeScreen extends StatelessWidget {
         height: cardItemHeight,
         child: Card(
           margin: const EdgeInsets.all(10),
-          color: Commons.kColor.withGreen(100),
+          color: Commons.kColor.withGreen(120),
           shadowColor: Commons.kColor,
           elevation: 10,
           child: Column(

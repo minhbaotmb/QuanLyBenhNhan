@@ -35,7 +35,7 @@ class _UserInfoScreenState extends State<UserInfoScreen>
   Container header() {
     return Container(
       color: Commons.kColor,
-      height: Commons.headerSize,
+      height: MediaQuery.of(context).orientation == Orientation.portrait ? Commons.headerSize : Commons.headerSize / 2,
       child: DrawerHeader(
         decoration: Helpers.gradientDecoration(Commons.k2Color, Commons.kColor),
         child: Column(

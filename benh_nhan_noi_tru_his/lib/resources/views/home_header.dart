@@ -21,7 +21,9 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
       children: [
         Expanded(
           child: SizedBox(
-            height: Commons.headerSize,
+            height: MediaQuery.of(context).orientation == Orientation.portrait
+                ? Commons.headerSize
+                : Commons.headerSize / 2,
             child: AnimatedBackground(
               vsync: this,
               behaviour: RandomParticleBehaviour(options: particles),
@@ -57,9 +59,10 @@ class _HomeHeaderScreenState extends State<HomeHeaderScreen>
                                 ? " Bạn có $messageUnread tin nhắn chưa xem"
                                 : " Bạn không có tin nhắn nào !",
                             style: const TextStyle(
-                                fontSize: Commons.fontSize16,
-                                color: Colors.white,
-                                fontStyle: FontStyle.italic),
+                              fontSize: Commons.fontSize16,
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic,
+                            ),
                           ),
                         ],
                       ),

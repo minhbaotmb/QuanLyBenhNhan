@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Container(
                   padding: const EdgeInsets.only(top: 50),
                   child:
-                      const Text('Bạn quên mất khẩu? chúng tôi cũng hết cách!'),
+                      const Text('Bạn quên mật khẩu? chúng tôi cũng hết cách!'),
                 ),
               ],
             ),
