@@ -1,6 +1,0 @@
-workflows:
-  sample_workflow:
-    name: My Workflow
-    labels:
-      - QA
-      - TMB
