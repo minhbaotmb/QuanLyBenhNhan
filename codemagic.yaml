@@ -1,0 +1,6 @@
+workflows:
+  sample_workflow:
+    name: My Workflow
+    labels:
+      - QA
+      - ${TENANT_NAME}
