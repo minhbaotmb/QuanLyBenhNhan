@@ -3,4 +3,4 @@ workflows:
     name: My Workflow
     labels:
       - QA
-      - ${TENANT_NAME}
+      - TMB
